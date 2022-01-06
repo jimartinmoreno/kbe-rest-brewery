@@ -10,14 +10,11 @@ import javax.validation.ConstraintViolationException;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by jt on 2019-05-25.
- */
 @ControllerAdvice
 public class MvcExceptionHandler {
 
     @ExceptionHandler(ConstraintViolationException.class)
-    public ResponseEntity<List> validationErrorHandler(ConstraintViolationException e){
+    public ResponseEntity<List> validationErrorHandler(ConstraintViolationException e) {
         List<String> errors = new ArrayList<>(e.getConstraintViolations().size());
 
         e.getConstraintViolations().forEach(constraintViolation -> {
@@ -28,7 +25,7 @@ public class MvcExceptionHandler {
     }
 
     @ExceptionHandler(BindException.class)
-    public ResponseEntity<List> handleBindException(BindException ex){
+    public ResponseEntity<List> handleBindException(BindException ex) {
         return new ResponseEntity(ex.getAllErrors(), HttpStatus.BAD_REQUEST);
     }
 }

@@ -12,9 +12,6 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.Random;
 
-/**
- * Created by jt on 3/7/21.
- */
 @Slf4j
 @RequiredArgsConstructor
 @Component
@@ -60,7 +57,7 @@ public class BeerLoader implements CommandLineRunner {
     }
 
     private synchronized void loadBeerObjects() {
-        log.debug("Loading initial data. Count is: {}", beerRepository.count() );
+        log.debug("Loading initial data. Count is: {}", beerRepository.count());
 
         if (beerRepository.count() == 0) {
 

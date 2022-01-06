@@ -4,9 +4,6 @@ import guru.springframework.sfgrestbrewery.domain.Customer;
 import guru.springframework.sfgrestbrewery.web.model.CustomerDto;
 import org.mapstruct.Mapper;
 
-/**
- * Created by jt on 2019-05-25.
- */
 @Mapper
 public interface CustomerMapper {
 

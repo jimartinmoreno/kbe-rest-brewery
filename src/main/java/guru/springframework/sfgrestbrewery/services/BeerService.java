@@ -7,13 +7,10 @@ import org.springframework.data.domain.PageRequest;
 
 import java.util.UUID;
 
-/**
- * Created by jt on 2019-04-20.
- */
 public interface BeerService {
-    BeerPagedList listBeers(String beerName, BeerStyleEnum beerStyle, PageRequest pageRequest, Boolean showInventoryOnHand);
+    BeerPagedList listBeers(String beerName, BeerStyleEnum beerStyle, PageRequest pageRequest, boolean showInventoryOnHand);
 
-    BeerDto getById(UUID beerId, Boolean showInventoryOnHand);
+    BeerDto getById(UUID beerId, boolean showInventoryOnHand);
 
     BeerDto saveNewBeer(BeerDto beerDto);
 

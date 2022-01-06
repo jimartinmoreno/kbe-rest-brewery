@@ -1,6 +1,6 @@
 # SFG Beer Works - RESTful Brewery Service
 
-This project is to support learning about Restful APIs. 
+This project is to support learning about Restful APIs and Dockers containers
 
 You can access the API documentation [here](https://sfg-beer-works.github.io/brewery-api/#tag/Beer-Service) 
 

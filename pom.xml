@@ -84,6 +84,10 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
+                    <layers>
+                        <enabled>true</enabled>
+                        <includeLayerTools>true</includeLayerTools>
+                    </layers>
                     <excludes>
                         <exclude>
                             <groupId>org.projectlombok</groupId>
@@ -119,13 +123,14 @@
                     </compilerArgs>
                 </configuration>
             </plugin>
+            <!-- Deprecated reemplazar con el plugin Eclipse JKube -->
             <plugin>
                 <groupId>io.fabric8</groupId>
                 <artifactId>docker-maven-plugin</artifactId>
                 <version>0.33.0</version>
                 <configuration>
                     <verbose>true</verbose>
-                    <!--                    <dockerHost>http://ubuntu-vm:2375</dockerHost>-->
+                    <!--  <dockerHost>http://ubuntu-vm:2375</dockerHost>-->
                     <images>
                         <image>
                             <name>${docker.image.prefix}/${docker.image.name}</name>
